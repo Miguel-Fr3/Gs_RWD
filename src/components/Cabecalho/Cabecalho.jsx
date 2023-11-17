@@ -11,6 +11,9 @@ export default function Cabecalho() {
 
   return (
     <header>
+      <div >
+            <Image src="/logo.png" alt="Logo Mapped" width={100} height={50}  priority={true} className='logo'/>
+        </div>
     <nav>
       <div className='rotas'>
         
@@ -32,7 +35,7 @@ export default function Cabecalho() {
           <Link href="/login" className={pathname === '/sobre' ? 'active' : ''}>
             Login
           </Link>
-          
+
       </div>
     </nav>
 </header>
