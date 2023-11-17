@@ -22,17 +22,17 @@ export default function Cabecalho() {
           </Link>
         
         
-          <Link href="/consulta" className={pathname === '/ajuda' ? 'active' : ''}>
+          <Link href="/consulta" className={pathname === '/consulta' ? 'active' : ''}>
             Consulta
           </Link>
         
         
-          <Link href="/formulario" className={pathname === '/modals' ? 'active' : ''}>
+          <Link href="/formulario" className={pathname === '/formulario' ? 'active' : ''}>
             Formulario
           </Link>
         
         
-          <Link href="/login" className={pathname === '/sobre' ? 'active' : ''}>
+          <Link href="/login" className={pathname === '/login' ? 'active' : ''}>
             Login
           </Link>
 
