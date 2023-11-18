@@ -1,0 +1,21 @@
+.rodape{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: #fbfbfb;
+    height: 50px;
+
+    p{
+        color: #fbfbfb;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        text-align: center;
+    }
+}
