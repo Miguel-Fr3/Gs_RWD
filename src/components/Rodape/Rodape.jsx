@@ -2,7 +2,7 @@ import './Rodape.scss'
 export default function Rodape() {
   return (
     <footer>
-        <div class="rodape">
+        <div className="rodape">
             <p> Alberto Seiji Assato - RM 99977 |
                 Matheus Rodrigues Oliveira - RM 551997 |
                 Miguel Francisco de Freitas Fernandes - RM 99997 |
