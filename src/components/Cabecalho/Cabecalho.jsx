@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import './Cabecalho.scss';
 
 export default function Cabecalho() {
 
@@ -10,11 +11,11 @@ export default function Cabecalho() {
 
 
   return (
-    <header>
+    <header className='cabecalho'>
       <div >
             <Image src="/logo.png" alt="Logo Mapped" width={100} height={50}  priority={true} className='logo'/>
         </div>
-    <nav>
+    <nav className='menu'>
       <div className='rotas'>
         
           <Link href="/" className={pathname === '/' ? 'active' : ''}>
