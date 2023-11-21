@@ -21,6 +21,7 @@ export default function Login() {
             <div className="register">
               <input type="submit" id="Idlogar" value="Entrar" />
             </div>
+            <Link href="/login/cadastro" className='caminho'>Não tem cadastro? Clique aqui!</Link>
           </form>
         </div>
       </main>
