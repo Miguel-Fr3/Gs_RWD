@@ -6,15 +6,18 @@
     width: 100%;
     top: 0px;
     border: 0.824709px solid #000000;
-    background: #E0FFFF;
+    background: #1906ca;
     .logo{
-        width: 175px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        display: block;
+        object-fit: contain;
       }
        
     .menu{
       width: 100%;
-      background-color: #B0E0E6;
+      background-color: #dd7a08;
       display: flex;
       justify-content: space-around;
       align-items: center;
