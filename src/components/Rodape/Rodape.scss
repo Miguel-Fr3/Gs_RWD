@@ -6,8 +6,25 @@
     flex-direction: column;
     background-color: #000;
     color: #fbfbfb;
-    height: 200px;
+    height: 300px;
 
+
+    .back-end{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .front-end{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
     p{
         color: #fbfbfb;
         display: flex;
@@ -19,4 +36,9 @@
         font-weight: 700;
         text-align: center;
     }
+    h1{
+        text-align: center;
+        color: #fbfbfb;
+    }
+
 }
