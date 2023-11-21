@@ -9,9 +9,9 @@ export default function Login() {
   <main className="login">
         <div className="form">
           <form className="formulario">
-            <h1>Acessar Conta</h1>
+            <h1>Login</h1>
             <div>
-              <label htmlFor="IdEmail">Preencha seus dados de acesso para continuar.</label>
+              <label htmlFor="IdEmail">Preencha seus dados</label>
               <input type="text" id="IdEmail" name='email' placeholder="Email" autoComplete="email"/>
             </div>
             <div>
