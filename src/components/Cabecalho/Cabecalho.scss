@@ -17,7 +17,7 @@
        
     .menu{
       width: 100%;
-      background-color: #dd7a08;
+      background-color: #f90;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -29,7 +29,7 @@
         justify-content: space-between;
         align-items: center;
         text-decoration: none;
-
+        
         .active {
 
               color: #fbfbfb; 
@@ -39,10 +39,15 @@
     }
 
             a{
+              text-align: center;
+                width: 300px;
                 font-size: 1.9rem;
-                margin-right: 10rem;
                 color: #000;
                 text-decoration: none;
+            }
+            a:hover{
+              color: #ffffff;
+              background-color: #f60;
             }
         
 
