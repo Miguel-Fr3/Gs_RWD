@@ -1,6 +1,6 @@
 "use client";
 import Link from 'next/link'
-
+import './login.scss'
 
 
 
@@ -15,7 +15,7 @@ export default function Login() {
               <input type="text" id="IdEmail" name='email' placeholder="Email"/>
             </div>
             <div>
-              <label htmlFor="Senha"></label>
+              <label htmlFor="Senha">Digite sua senha</label>
               <input type="password" id="IdSenha" name='senha' placeholder="Senha" />
             </div>
             <div className="register">
