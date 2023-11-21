@@ -6,15 +6,16 @@
     width: 100%;
     top: 0px;
     border: 0.824709px solid #000000;
-    background: #E0FFFF;
+    background: #4169E1;
     .logo{
-        width: 175px;
-        height: 150px;
+        width: 200px;
+        height: 175px;
+        filter: grayscale(100%);
       }
        
     .menu{
       width: 100%;
-      background-color: #B0E0E6;
+      background-color: #6495ED;
       display: flex;
       justify-content: space-around;
       align-items: center;
