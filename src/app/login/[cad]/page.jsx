@@ -18,7 +18,7 @@ export default function Cadastro() {
           <input type="password" id="IdSenha" name='senha' placeholder="Senha" autoComplete="current-password"/>
         </div>
         <div className="register">
-          <input type="submit" id="Idlogar" value="Entrar" />
+          <input type="submit" id="IdCad" value="Entrar" />
         </div>
         <Link href="/login" className='caminho'>Tem cadastro? Clique aqui!</Link>
       </form>
