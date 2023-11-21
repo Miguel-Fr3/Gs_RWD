@@ -1,9 +1,9 @@
 import Image from 'next/image'
-
+import './Home.scss'
 export default function Home() {
   return (
-    <>
-    <h1>HOME</h1>
-    </>
+    <main className='home'>
+    <h1>Pagina inicial</h1>
+    </main>
   )
 }
