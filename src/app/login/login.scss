@@ -1,91 +1,110 @@
 body .login{
-    background-color: #74b3e7;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; 
-    z-index: 999; 
-    overflow: auto; 
+  background-color: #74b3e7;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; 
+  overflow: auto; 
 
-    .formulario{
-        min-width: 700px;
-        min-height: 450px;
-        margin: auto;
-        padding: 15px;
-        background-color: #FBFBFB;
-        border-radius: 5px;
-        box-shadow: 0 2px 6px #000;
-        h1 {
-          display: flex;
-          justify-content: center;
-          text-align: center;
-          color: #030303;
-          font-weight: bold;
-          margin-bottom: 25px;
-          font-size: 2.5rem;
-        }
-      
-      div{
-        label{
+  .formulario{
+      min-width: 700px;
+      min-height: 450px;
+      margin: auto;
+      padding: 15px;
+      background-color: #FBFBFB;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px #000;
+      .login{
+        height: 20px;
+        visibility: hidden;
+      }
+      .suc{
+        height: 50px;
         display: flex;
         justify-content: center;
-        align-items: center;
-        color: #000;
-        font-weight: bolder;
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-      }
-      input {
-        width: 100%;
-        padding: 8px;
-        border: 2px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box;
-        background-color: #fbfbfb;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 1.5rem;
-      }
-    }
-      .register input{
-        background-color: #156422;
-        color: #fbfbfb;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
+        text-align: center;
+        color: #2ac50b;
         font-weight: bold;
-        width: 100%;
-        margin-top: 10px;
-        margin-bottom: 20px;
+        font-size: 2.5rem;
       }
-      .register input:hover{
-        background-color: #28a03c;
+      .err{
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: #c50b0b;
+        font-weight: bold;
+        font-size: 2.5rem;
       }
+      h1 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: #030303;
+        font-weight: bold;
+        margin-bottom: 25px;
+        font-size: 2.5rem;
+      }
+    
+    div{
+      label{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #000;
+      font-weight: bolder;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      background-color: #fbfbfb;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
     }
   }
-
-  
-  #IdSenha{
-    margin-top: 10px;
+    .register input{
+      background-color: #156422;
+      color: #fbfbfb;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .register input:hover{
+      background-color: #28a03c;
+    }
   }
-  .formulario .register{
-    margin-top: 10px;
-  }
-  
-  .form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 88.5vh;
+}
 
 
-  }
-  
+#IdSenha{
+  margin-top: 10px;
+}
+.formulario .register{
+  margin-top: 10px;
+}
 
-  .caminho{
-    color: #156422;
-    font-size: larger;
-    font-weight: bolder;
-  }
+.form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 88.5vh;
+}
+
+
+.caminho{
+  color: #156422;
+  font-size: larger;
+  font-weight: bolder;
+}
