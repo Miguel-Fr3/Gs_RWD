@@ -1,9 +1,9 @@
 import './teste.scss'
 
-export default function teste() {
+export default function Pconsulta() {
   return (
     <main className='teste'>
-        <h1>Teste</h1>
+        <h1>Pré-Consulta</h1>
     </main>
   )
 }
