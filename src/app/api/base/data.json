@@ -1,16 +1,1 @@
-{
-    "usuarios": [
-      {
-        "id": 1,
-        "nome": "Patrick jaguski",
-        "email": "patrick@gmail.com",
-        "senha": "12345"
-      },
-      {
-        "id": 2,
-        "nome": "Nicolly Almeida",
-        "email": "nicks@gmail.com",
-        "senha": "54321"
-      }
-    ]
-}
+{"usuarios":[{"id":1,"email":"patrick@gmail.com","senha":"12345"},{"id":2,"email":"nicks@gmail.com","senha":"54321"},{"id":3,"email":"rafa@gmail.com","senha":"654321"}]}
