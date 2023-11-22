@@ -25,8 +25,8 @@ export default function Cabecalho() {
           </Link>
 
           <div className='image'>
-            <Image src="/logo.png" alt="Logo Mapped" width={100} height={50}  priority={true} className='logo'/>
-            <h1>Mapped</h1>
+            <h1>Mapped <br /> Innovation</h1>
+
         </div>
         
           <Link href="/consulta" className={pathname === '/consulta' ? 'active' : ''}>
