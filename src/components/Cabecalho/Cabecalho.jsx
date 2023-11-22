@@ -19,7 +19,7 @@ export default function Cabecalho() {
             Home
           </Link>
                       
-          <Link href="/teste" className={pathname === '/teste' ? 'active' : ''}>
+          <Link href="/Pconsulta" className={pathname === '/Pconsulta' ? 'active' : ''}>
             Formulario
           </Link>
 
