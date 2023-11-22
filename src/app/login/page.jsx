@@ -82,15 +82,16 @@ export default function Login() {
   return (
   <main className="login">
         <div className="form">
-          <form className="formulario">
+          <form className="formulario" onSubmit={handleSubmit}>
             <h1>Login</h1>
+            <h2 className={classMsg}>{Stats}</h2>
             <div>
               <label htmlFor="IdEmail">Preencha seus dados</label>
-              <input type="text" id="IdEmail" name='email' placeholder="Email" autoComplete="email"/>
+              <input type="text" id="IdEmail" name='email' placeholder="Email" autoComplete="email" value={usuario.email} onChange={handleChange}/>
             </div>
             <div>
               <label htmlFor="IdSenha">Digite sua senha</label>
-              <input type="password" id="IdSenha" name='senha' placeholder="Senha" autoComplete="current-password"/>
+              <input type="password" id="IdSenha" name='senha' placeholder="Senha" autoComplete="current-password" value={usuario.senha} onChange={handleChange}/>
             </div>
             <div className="register">
               <input type="submit" id="Idlogar" value="Entrar" />
