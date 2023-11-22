@@ -1,8 +1,8 @@
-import './teste.scss'
+import './Pconsulta.scss'
 
 export default function Pconsulta() {
   return (
-    <main className='teste'>
+    <main className='Pconsulta'>
         <h1>Pré-Consulta</h1>
     </main>
   )
