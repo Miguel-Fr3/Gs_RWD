@@ -1,5 +1,4 @@
 'use client'
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import './Cabecalho.scss';
@@ -12,9 +11,7 @@ export default function Cabecalho() {
 
   return (
     <header className='cabecalho'>
-      <div >
-            <Image src="/logo.png" alt="Logo Mapped" width={100} height={50}  priority={true} className='logo'/>
-        </div>
+
     <nav className='menu'>
       <div className='rotas'>
         
@@ -25,6 +22,11 @@ export default function Cabecalho() {
           <Link href="/formulario" className={pathname === '/formulario' ? 'active' : ''}>
             Formulario
           </Link>
+
+          <div className='image'>
+            <h1>Mapped <br /> Innovation</h1>
+
+        </div>
         
           <Link href="/consulta" className={pathname === '/consulta' ? 'active' : ''}>
             Consulta
