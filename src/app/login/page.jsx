@@ -9,7 +9,7 @@ export default function Login() {
     const navigate = useRouter();
 
     const [Stats, setStats] = useState("");
-    const [classLoginMsg, setClassLoginMsg] = useState("");
+    const [classMsg, setClassMsg] = useState("");
 
     const [usuario, setUsuario] = useState({
         "info":"login",
@@ -19,23 +19,23 @@ export default function Login() {
 
     useEffect(() => {
        if(Stats == "SUCESSO!"){
-          setClassLoginMsg("suc");
+          setClassMsg("suc");
         }else if(Stats == "USUÁRIO E OU SENHA INVÁLIDOS!"){
-            setClassLoginMsg("err");
+            setClassMsg("err");
         }else{
-            setClassLoginMsg("login");
+            setClassMsg("login");
         }
     }, [Stats]);
     
-    //Função de preenchimento do FORM...
+
     const handleChange = (e)=>{
-        //Destructuring
+
         const{name, value} = e.target;
-        //Prenchendo o campo, utilizando o useState com SPREAD + OnChange:
+
         setUsuario({...usuario,[name]:value});
     }
 
-    //Função de validação e ENVIO dos dados.
+
     const handleSubmit = async (e)=>{
         e.preventDefault();
 
@@ -53,22 +53,20 @@ export default function Login() {
 
                 if(user){
 
-                    //Gerando o token do usuário:
                     const token = Math.random().toString(36).substring(2) + Math.random().toString(36).substring(2);
 
-                    //Armazenar o token no sessionStorage:
                     sessionStorage.setItem("token-user",token);
 
-                    setMsgStatus("SUCESSO!");
+                    setStats("SUCESSO!");
                     
                     setTimeout(()=>{
-                        setMsgStatus("");
+                        setStats("");
                         navigate.push("/");
                     },5000);
                 }else{
-                    setMsgStatus("USUÁRIO E OU SENHA INVÁLIDOS!");
+                    setStats("USUÁRIO E OU SENHA INVÁLIDOS!");
                     setTimeout(()=>{
-                        setMsgStatus("");
+                        setStats("");
                         setUsuario({
                             "info":"login",
                             "email":"",
