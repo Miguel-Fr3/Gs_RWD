@@ -12,6 +12,7 @@
     .menu{
       width: 100%;
       background: #1906ca;
+      height: 60px;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -35,6 +36,7 @@
           border-bottom-right-radius: 50px;
           border-right: 50px;
           border-left: 50px;
+          margin-top: 20px;
           margin-left: 10px;
           margin-right: 10px;
         h1{
