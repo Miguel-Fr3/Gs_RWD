@@ -11,7 +11,7 @@ export default function Home() {
         <p>A agilidade e ganho de tempo são benefícios significativos. Ao optar por serviços de uma pré-consulta, os usuários eliminam a necessidade de deslocamentos físicos, poupando tempo precioso que poderia ser dedicado a outras atividades.</p>
       </div>
       <div>
-        <Image src="/img1.png" alt="Imagem de gestão de tempo" width={200} height={140} priority={true} className='img'/>
+        <Image src="/img4.png" alt="Imagem de gestão de tempo" width={200} height={140} priority={true} className='img'/>
         <h2>Redução da fila</h2>
         <p>A desistência de agendamentos ocorre devido à longa espera por atendimento telefônico, gerando estresse pré-atendimento. A opção de pré-consulta proporciona rapidez e praticidade, aliviando a necessidade de esperas prolongadas e incentivando a escolha por serviços mais eficientes, reduzindo filas de espera por telefone.</p>
       </div>
