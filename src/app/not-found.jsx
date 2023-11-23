@@ -1,10 +1,10 @@
 import React from 'react'
-
+import './Home.scss'
 export default function NotFound() {
   return (
-    <div>
+    <main className='erro'>
         <h1>404</h1>
         <p>Pagina não encontrada!</p>
-    </div>
+    </main>
   )
 }
