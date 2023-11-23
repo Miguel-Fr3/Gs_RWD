@@ -11,7 +11,7 @@ body .home{
     flex-direction: column;
 
     h1{
-        margin-top: 30px;
+        margin-top: 6rem;
         font-size: xx-large;
     }
     .beneficios{
@@ -21,25 +21,33 @@ body .home{
         flex-direction: row;
 
         div{
-            margin-top: 2rem;
+            margin-top: 7rem;
             margin-right: 1rem;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             border: 1px solid #000;
-            background-color: #c1c1c1;
+            background-color: #fbfbfb;
             height: 400px;
             width: 400px;
+
             .img{
                 margin-top:10px ;
+                margin-bottom: 10px;
+                border: 1px solid #000;
             }
             h2{
                 text-align: center;
+                margin-bottom: 10px;
             }
             p{
                 text-align: center;
             }
         }
+        div:hover {
+            transform: scale(1.1); 
+            background-color: #c5c5c5;
+          }
     }
 }
