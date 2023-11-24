@@ -12,7 +12,7 @@
       background: #1906ca;
       height: 60px;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
       flex-direction: row;
       font-weight: bolder;
@@ -91,8 +91,9 @@
       width: 100%;
       background: #1906ca;
       height: 50px;
-      display: block;
-
+      display: flex;
+      justify-content: center;
+      align-items: center;
   
       .rotas{
         display: flex;
@@ -171,8 +172,9 @@
         width: 100%;
         background: #1906ca;
         height: 50px;
-        display: block;
-  
+        display: flex;
+        justify-content: center;
+        align-items: center;
     
         .rotas{
           display: flex;
@@ -251,8 +253,9 @@
         width: 100%;
         background: #1906ca;
         height: 60px;
-        display: block;
-  
+        display: flex;
+        justify-content: center;
+        align-items: center;
     
         .rotas{
           display: flex;
@@ -330,7 +333,9 @@
         width: 100%;
         background: #1906ca;
         height: 60px;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
   
     
         .rotas{
