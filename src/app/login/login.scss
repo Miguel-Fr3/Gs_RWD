@@ -108,3 +108,36 @@ body .login{
   font-size: larger;
   font-weight: bolder;
 }
+
+
+
+
+
+   // Mobile
+
+   @media (max-width:375px){
+
+   }
+   
+   
+   
+   
+       //mobile large
+     @media (min-width:376px) and (max-width:599px){
+   
+     }
+   
+   
+       
+     //tablet
+   
+     @media (min-width: 600px) and (max-width:999px){
+   
+     }
+   
+   
+   
+     // Desktop
+     @media (min-width: 1000px) and (max-width:1399px){
+   
+     }
