@@ -1,6 +1,18 @@
+'use client'
 import './Pconsulta.scss'
-
+import { useEffect } from "react";
 export default function Pconsulta() {
+
+  useEffect(() => {
+    if(sessionStorage.getItem("token-user") != null && sessionStorage.getItem("token-user") != undefined) {
+
+    } else {
+      window.location.href = "/login";
+    }
+  }
+);
+
+
   return (
     <main className='Pconsulta'>
       <div className='Container'>
