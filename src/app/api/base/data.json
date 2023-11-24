@@ -1,1 +1,1 @@
-{"usuarios":[{"id":1,"email":"patrick@gmail.com","senha":"12345"},{"id":2,"email":"nicks@gmail.com","senha":"54321"},{"id":3,"email":"rafa@gmail.com","senha":"654321"}]}
+{"usuarios":[{"cdLogin":1,"dsEmail":"nobre@gmail.com","dsSenha":"12345"},{"cdLogin":2,"dsEmail":"nicks@gmail.com","dsSenha":"54321"},{"cdLogin":3,"dsEmail":"rafa@gmail.com","dsSenha":"654321"}]}

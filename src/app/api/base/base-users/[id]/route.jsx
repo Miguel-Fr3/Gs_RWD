@@ -1,10 +1,12 @@
-import {promises as fs} from 'fs';
+
+import { promises as fs } from 'fs';
 import { NextResponse } from 'next/server';
 
-export async function GET(request, {params}) {
-    
-    const file  = await  fs.readFile(process.cwd() + '/src/app/api/base/data.json', 'utf8');
 
+
+export async function GET(request, { params }) {
+
+    const filePath = process.cwd() + 'http://localhost:8080/api/login';
     const id = params.id;
 
     const usuarios =  await JSON.parse(file);
@@ -17,62 +19,67 @@ export async function GET(request, {params}) {
 }
 
 
-const handleLogin = async (email,senha)=>{
-    const file  = await  fs.readFile(process.cwd() + '/src/app/api/base/data.json', 'utf8');
-    const usuarios = await JSON.parse(file);
+const handleLogin = async (dsEmail, dsSenha) => {
 
-    try{
-        for (let x = 0; x < usuarios.usuarios.length; x++) {
-            const userFile = usuarios.usuarios[x];
+        const fileContent = await  fs.readFile(process.cwd() + 'http://localhost:8080/api/login/autenticar', 'utf8');
+        const usuarios = JSON.parse(fileContent);
 
-            if(userFile.email == email && userFile.senha == senha){
-                return userFile;
+        try{
+            for (let x = 0; x < usuarios.usuarios.length; x++) {
+                const userFile = usuarios.usuarios[x];
+    
+                if(userFile.email == dsEmail && userFile.senha == dsSenha){
+                    return userFile;
+                }
             }
-        }
-        return null;
-    }catch(error){
-        console.log(error);
- }
-}
+            return null;
+        }catch(error){
+            console.log(error);
+     }
+    }
+    
+
+const handleCadastrar = async (dsEmail, dsSenha) => {
+    const fileContent =  await  fs.readFile(process.cwd() + 'http://localhost:8080/api/login', 'utf8');
+    const usuarios = JSON.parse(fileContent);
+    try {
 
 
-const handleCadastrar = async (email,senha)=>{
-    const file  = await  fs.readFile(process.cwd() + '/src/app/api/base/data.json', 'utf8');
-    const usuarios = await JSON.parse(file);
-
-    try{
-        
-
-        const id =  (usuarios.usuarios[usuarios.usuarios.length-1].id + 1);
+        const cdLogin = (usuarios.usuarios[usuarios.usuarios.length - 1].id + 1);
 
         const user = {
-            "id":id,
-            "email":email,
-            "senha":senha
-        }
-
+            "cdLogin": cdLogin,
+            "dsEmail": dsEmail,
+            "dsSenha": dsSenha
+        };
 
         usuarios.usuarios.push(user);
 
 
-        await fs.writeFile(process.cwd() + '/src/app/api/base/data.json', JSON.stringify(usuarios));
+        await fs.writeFile(process.cwd() + 'http://localhost:8080/api/login', JSON.stringify(usuarios));
 
         return user;
-    }catch(error){
-        console.log(error);
- }
-}
+    } catch (error) {
+        console.error(error);
 
-export async function POST(request, response){
-
-    const {info,email,senha} = await request.json();
-
-    console.log(info,email,senha);
-
-    if(info == "login"){
-        return  NextResponse.json( await handleLogin(email,senha));
-    } else if(info == "cadastro"){
-        return  NextResponse.json( await handleCadastrar(email,senha));
     }
-    return NextResponse.json({"status":false});
+};
+
+export async function POST(request, response) {
+    try {
+        const { info, dsEmail, dsSenha } = await request.json();
+
+        console.log(info, dsEmail, dsSenha);
+
+        if (info == "login") {
+            return NextResponse.json(await handleLogin(dsEmail, dsSenha));
+        } else if (info == "cadastro") {
+            return NextResponse.json(await handleCadastrar(dsEmail, dsSenha));
+        }
+
+        return NextResponse.json({ "status": false });
+    } catch (error) {
+        console.error(error);
+        return NextResponse.error(error);
+    }
 }
