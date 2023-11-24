@@ -12,8 +12,8 @@ export default function Cadastro() {
 
   const [usuario, setUsuario] = useState({
     "info": "cadastro",
-    "email": "",
-    "senha": "",
+    "dsEmail": "",
+    "dsSenha": "",
   });
 
   useEffect(() => {
@@ -25,14 +25,7 @@ export default function Cadastro() {
       }, 5000);
     } else if (stats === 'OCORREU UM ERRO!') {
       setClassMsg('err');
-      setTimeout(() => {
-        setStats('');
-        setUsuario({
-          info: 'cadastro',
-          email: '',
-          senha: '',
-        });
-      }, 5000);
+
     } else {
       setClassMsg('login');
     }

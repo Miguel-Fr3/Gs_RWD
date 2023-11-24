@@ -12,8 +12,8 @@ export default function Login() {
 
   const [usuario, setUsuario] = useState({
     "info": "login",
-    "email": "",
-    "senha": "",
+    "dsEmail": "",
+    "dsSenha": "",
   });
 
   useEffect(() => {
@@ -25,14 +25,6 @@ export default function Login() {
       }, 5000);
     } else if (stats === 'USUÁRIO E OU SENHA INVÁLIDOS!') {
       setClassMsg('err');
-      setTimeout(() => {
-        setStats('');
-        setUsuario({
-          info: 'login',
-          email: '',
-          senha: '',
-        });
-      }, 5000);
     } else {
       setClassMsg('login');
     }
@@ -59,18 +51,9 @@ export default function Login() {
         },
         body: JSON.stringify(usuario),
       });
-  
-      console.log('Response:', response);
-  
+
       if (response.ok) {
-        const responseBody = await response.json();
-  
-        console.log('Response Text:', responseBody);
-  
-        if (responseBody) {
-          try {
-            const user = JSON.parse(responseBody);
-            console.log('Parsed JSON:', user);
+        const user = await response.json();
   
             if (user) {
               const token =
@@ -78,30 +61,29 @@ export default function Login() {
                 Math.random().toString(36).substring(2);
   
               sessionStorage.setItem('token-user', token);
-              setStats('SUCESSO!');
-            } else {
-              setStats('USUÁRIO E OU SENHA INVÁLIDOS!');
-            }
-          } catch (jsonError) {
-            console.error('Erro ao analisar JSON da resposta:', jsonError);
-            console.error('Resposta do servidor:', response);
-            setStats('Ocorreu um erro na autenticação.');
-          }
-        } else {
-          console.error('Corpo da resposta está vazio.');
-          setStats('Ocorreu um erro na autenticação.');
+              process.env.NEXT_PUBLIC_TOKEN_USER = token;
+              setStats('SUCESSO!');setTimeout(()=>{
+                setStats("");
+        
+                navigate.push("/");
+            },5000);
+        }else{
+            setStats("USUÁRIO E OU SENHA INVÁLIDOS!");
+            setTimeout(()=>{
+                setStats("");
+                setUsuario({
+                    "info":"login",
+                    "dsEmail":"",
+                    "dsSenha":""
+                });
+            },5000);
         }
-      } else {
-        console.error('Erro na requisição:', response.status);
-        console.error('Resposta do servidor:', response);
-        setStats('Ocorreu um erro na autenticação.');
-      }
-    } catch (error) {
-      console.error('Erro na autenticação:', error);
-      setStats('Ocorreu um erro na autenticação.');
     }
-  };
+} catch (error) {
+}
+}
   
+
 
   
 
@@ -116,10 +98,10 @@ export default function Login() {
             <input
               type="text"
               id="IdEmail"
-              name="email"
+              name="dsEmail"
               placeholder="Email"
               autoComplete="email"
-              value={usuario.email}
+              value={usuario.dsEmail}
               onChange={handleChange}
             />
           </div>
@@ -128,10 +110,10 @@ export default function Login() {
             <input
               type="password"
               id="IdSenha"
-              name="senha"
+              name="dsSenha"
               placeholder="Senha"
               autoComplete="current-password"
-              value={usuario.senha}
+              value={usuario.dsSenha}
               onChange={handleChange}
             />
           </div>
