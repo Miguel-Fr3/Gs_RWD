@@ -1,6 +1,18 @@
+'use client'
 import './Pconsulta.scss'
-
+import { useEffect } from "react";
 export default function Pconsulta() {
+
+  useEffect(() => {
+    if(sessionStorage.getItem("token-user") != null && sessionStorage.getItem("token-user") != undefined) {
+
+    } else {
+      window.location.href = "/login";
+    }
+  }
+);
+
+
   return (
     <main className='Pconsulta'>
       <div className='Container'>
@@ -10,53 +22,53 @@ export default function Pconsulta() {
             <section className='identificacao'>
               <h3>Perfil do paciente</h3>
 
-              <label>Nome:</label>
-              <input placeholder='Nome completo'></input>
+              <label htmlFor="nome">Nome:</label>
+              <input type="text" id="nome" placeholder='Nome completo' required />
 
               <div className='row'>
                 <div>
-                  <label>Sexo:</label>
-                  <input placeholder='Sexo'></input>
+                  <label htmlFor="sexo">Sexo:</label>
+                  <input type="text" id="sexo" placeholder='Sexo' required />
                 </div>
                 <div>
-                  <label>Data de nascimento: </label>
-                  <input placeholder='Data de nascimento'></input>
-                </div>
-              </div>
-              <div className='row'>
-                <div>
-                  <label>Peso: </label>
-                  <input placeholder='Peso'></input>
-                </div>
-                <div>
-                  <label>Altura: </label>
-                  <input placeholder='Altura'></input>
+                  <label htmlFor="dataNascimento">Data de nascimento: </label>
+                  <input type="date" id="dataNascimento" placeholder='Data de nascimento' required />
                 </div>
               </div>
               <div className='row'>
                 <div>
-                  <label>Nacionalidade: </label>
-                  <input placeholder='Nacionalidade'></input>
+                  <label htmlFor="peso">Peso: </label>
+                  <input type="number" id="peso" placeholder='Peso' required />
                 </div>
                 <div>
-                  <label>Estado civil: </label>
-                  <input placeholder='Estado civil'></input>
+                  <label htmlFor="altura">Altura: </label>
+                  <input type="number" id="altura" placeholder='Altura' required />
+                </div>
+              </div>
+              <div className='row'>
+                <div>
+                  <label htmlFor="nacionalidade">Nacionalidade: </label>
+                  <input type="text" id="nacionalidade" placeholder='Nacionalidade' required />
+                </div>
+                <div>
+                  <label htmlFor="estadoCivil">Estado civil: </label>
+                  <input type="text" id="estadoCivil" placeholder='Estado civil' required />
                 </div>
               </div>
               <div className='column'>
-                <label>Religião: </label>
-                <input placeholder='Religião'></input>
+                <label htmlFor="religiao">Religião: </label>
+                <input type="text" id="religiao" placeholder='Religião' required />
               </div>
-              <label>Endereço: </label>
-              <input placeholder='Endereço'></input>
+              <label htmlFor="endereco">Endereço: </label>
+              <input type="text" id="endereco" placeholder='Endereço' required />
               <div className='row'>
                 <div>
-                  <label>Profissão: </label>
-                  <input placeholder='Profissão'></input>
+                  <label htmlFor="profissao">Profissão: </label>
+                  <input type="text" id="profissao" placeholder='Profissão' required />
                 </div>
                 <div>
-                  <label>Escolaridade: </label>
-                  <input placeholder='Escolaridade'></input>
+                  <label htmlFor="escolaridade">Escolaridade: </label>
+                  <input type="text" id="escolaridade" placeholder='Escolaridade' required />
                 </div>
               </div>
             </section>
@@ -64,20 +76,20 @@ export default function Pconsulta() {
             <section className='causas'>
               <h3>Causas</h3>
 
-              <label>Queixa principal: </label>
-              <textarea placeholder='Escreva o que você está sentindo'></textarea>
+              <label htmlFor="queixaPrincipal">Queixa principal: </label>
+              <textarea id="queixaPrincipal" placeholder='Escreva o que você está sentindo' required></textarea>
 
-              <label>Quanto tempo está sentindo? </label>
-              <textarea placeholder='Escreva a quanto tempo está passando mal'></textarea>
+              <label htmlFor="tempoSintoma">Quanto tempo está sentindo? </label>
+              <textarea id="tempoSintoma" placeholder='Escreva a quanto tempo está passando mal' required></textarea>
 
-              <label>Hábitos/vícios: </label>
-              <textarea placeholder='Fuma, bebe, utiliza algum medicamento regularmente, tem vida sexual ativa, etc'></textarea>
+              <label htmlFor="habitos">Hábitos/vícios: </label>
+              <textarea id="habitos" placeholder='Fuma, bebe, utiliza algum medicamento regularmente, tem vida sexual ativa, etc' required></textarea>
 
-              <label>Tempo de sono: </label>
-              <textarea placeholder='Escreva quantas horas você dorme por dia'></textarea>
+              <label htmlFor="tempoSono">Tempo de sono: </label>
+              <textarea id="tempoSono" placeholder='Escreva quantas horas você dorme por dia' required></textarea>
 
-              <label>Seus pais tem alguma doença hereditária? (se sim qual) </label>
-              <textarea placeholder='Caso não tiver digite "não"'></textarea>
+              <label htmlFor="doencaHereditaria">Seus pais têm alguma doença hereditária? (se sim, qual) </label>
+              <textarea id="doencaHereditaria" placeholder='Caso não tiver, digite "não"' required></textarea>
             </section>
           </div>
           <button type='submit'>Enviar</button>

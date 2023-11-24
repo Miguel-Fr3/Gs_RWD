@@ -1,7 +1,17 @@
+'use client'
 import './consulta.scss'
 import Image from 'next/image'
 import Link from 'next/link';
+import { useEffect } from "react";
 export default function Consulta() {
+  
+  useEffect(() => {
+    if(sessionStorage.getItem("token-user") != null && sessionStorage.getItem("token-user") != undefined) {
+    } else {
+      window.location.href = "/login";
+    }
+  }
+);
   return (
     <main className="consulta">
       <h1>Consulta</h1>
