@@ -83,10 +83,10 @@ export default function Cadastro() {
             <input
               type="text"
               id="IdEmail"
-              name="email"
+              name="dsEmail"
               placeholder="Email"
               autoComplete="email"
-              value={usuario.email}
+              value={usuario.dsEmail}
               onChange={handleChange}
             />
           </div>
@@ -95,10 +95,10 @@ export default function Cadastro() {
             <input
               type="password"
               id="IdSenha"
-              name="senha"
+              name="dsSenha"
               placeholder="Senha"
               autoComplete="current-password"
-              value={usuario.senha}
+              value={usuario.dsSenha}
               onChange={handleChange}
             />
           </div>

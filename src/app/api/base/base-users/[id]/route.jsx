@@ -45,10 +45,10 @@ const handleCadastrar = async (dsEmail, dsSenha) => {
     try {
 
 
-        const id = (usuarios.usuarios[usuarios.usuarios.length - 1].id + 1);
+        const cdLogin = (usuarios.usuarios[usuarios.usuarios.length - 1].id + 1);
 
         const user = {
-            "id": id,
+            "cdLogin": cdLogin,
             "dsEmail": dsEmail,
             "dsSenha": dsSenha
         };
