@@ -11,6 +11,10 @@ body .Pconsulta {
 
     .Container {
         width: 75%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -23,7 +27,7 @@ form {
     .formContainer {
         display: flex;
         gap: 1rem;
-
+        width: 1000px;
         section {
             flex: 1;
             background-color: #fff;
@@ -54,9 +58,6 @@ form {
                 color: #064789;
             }
 
-            input {
-                
-            }
 
             label+input,
             label+textarea {
@@ -76,7 +77,7 @@ form {
         font-size: 1rem;
         font-weight: 600;
         color: #fff;
-        background-color: #74b3e7;
+        background-color: #034e8b;
         border-radius: 8px;
         border: none;
         cursor: pointer;
@@ -84,6 +85,18 @@ form {
         &:active{
             transform: scale(0.98);
         }
+    }
+    button:hover {
+        width: 50%;
+        align-self: center;
+        padding: 1rem 0;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #000;
+        background-color: #74b3e7;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
     }
 
 }
@@ -94,7 +107,110 @@ form {
    // Mobile
 
    @media (max-width:375px){
-
+    body .Pconsulta {
+        background-color: #EBF2FA;
+        width: 100%;
+        display: flex;
+        padding-top: 30px;
+        justify-content: center;
+    
+        h1 {
+            font-size: xx-large;
+        }
+    
+        .Container {
+            width: 75%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem;
+    
+        .formContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 300px;
+            section {
+                flex: 1;
+                background-color: #fff;
+                padding: 1rem;
+                border-radius: 8px;
+                display: flex;
+                flex-direction: column;
+    
+                .row {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 1rem;
+    
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1;
+                    }
+                }
+    
+                .column {
+                    display: flex;
+                    flex-direction: column;
+                    width: calc(50% - 0.5rem)
+                }
+    
+                h3{
+                    color: #064789;
+                }
+    
+    
+                label+input,
+                label+textarea {
+                    margin-bottom: 10px;
+                }
+    
+                textarea {
+                    resize: none;
+                }
+            }
+        }
+    
+        button {
+            width: 50%;
+            align-self: center;
+            padding: 1rem 0;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            background-color: #034e8b;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+    
+            &:active{
+                transform: scale(0.98);
+            }
+        }
+        button:hover {
+            width: 50%;
+            align-self: center;
+            padding: 1rem 0;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #000;
+            background-color: #74b3e7;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+        }
+    
+    }
    }
    
    
@@ -102,7 +218,110 @@ form {
    
        //mobile large
      @media (min-width:376px) and (max-width:599px){
-   
+        body .Pconsulta {
+            background-color: #EBF2FA;
+            width: 100%;
+            display: flex;
+            padding-top: 30px;
+            justify-content: center;
+        
+            h1 {
+                font-size: xx-large;
+            }
+        
+            .Container {
+                width: 75%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 2rem;
+        
+            .formContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                width: 400px;
+                section {
+                    flex: 1;
+                    background-color: #fff;
+                    padding: 1rem;
+                    border-radius: 8px;
+                    display: flex;
+                    flex-direction: column;
+        
+                    .row {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        gap: 1rem;
+        
+                        div {
+                            display: flex;
+                            flex-direction: column;
+                            flex: 1;
+                        }
+                    }
+        
+                    .column {
+                        display: flex;
+                        flex-direction: column;
+                        width: calc(50% - 0.5rem)
+                    }
+        
+                    h3{
+                        color: #064789;
+                    }
+        
+        
+                    label+input,
+                    label+textarea {
+                        margin-bottom: 10px;
+                    }
+        
+                    textarea {
+                        resize: none;
+                    }
+                }
+            }
+        
+            button {
+                width: 50%;
+                align-self: center;
+                padding: 1rem 0;
+                font-size: 1rem;
+                font-weight: 600;
+                color: #fff;
+                background-color: #034e8b;
+                border-radius: 8px;
+                border: none;
+                cursor: pointer;
+        
+                &:active{
+                    transform: scale(0.98);
+                }
+            }
+            button:hover {
+                width: 50%;
+                align-self: center;
+                padding: 1rem 0;
+                font-size: 1rem;
+                font-weight: 600;
+                color: #000;
+                background-color: #74b3e7;
+                border-radius: 8px;
+                border: none;
+                cursor: pointer;
+            }
+        
+        }
      }
    
    
@@ -110,12 +329,217 @@ form {
      //tablet
    
      @media (min-width: 600px) and (max-width:999px){
-   
+        body .Pconsulta {
+            background-color: #EBF2FA;
+            width: 100%;
+            display: flex;
+            padding-top: 30px;
+            justify-content: center;
+        
+            h1 {
+                font-size: xx-large;
+            }
+        
+            .Container {
+                width: 75%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 2rem;
+        
+            .formContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                width: 600px;
+                section {
+                    flex: 1;
+                    background-color: #fff;
+                    padding: 1rem;
+                    border-radius: 8px;
+                    display: flex;
+                    flex-direction: column;
+        
+                    .row {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        gap: 1rem;
+        
+                        div {
+                            display: flex;
+                            flex-direction: column;
+                            flex: 1;
+                        }
+                    }
+        
+                    .column {
+                        display: flex;
+                        flex-direction: column;
+                        width: calc(50% - 0.5rem)
+                    }
+        
+                    h3{
+                        color: #064789;
+                    }
+        
+        
+                    label+input,
+                    label+textarea {
+                        margin-bottom: 10px;
+                    }
+        
+                    textarea {
+                        resize: none;
+                    }
+                }
+            }
+        
+            button {
+                width: 50%;
+                align-self: center;
+                padding: 1rem 0;
+                font-size: 1rem;
+                font-weight: 600;
+                color: #fff;
+                background-color: #034e8b;
+                border-radius: 8px;
+                border: none;
+                cursor: pointer;
+        
+                &:active{
+                    transform: scale(0.98);
+                }
+            }
+            button:hover {
+                width: 50%;
+                align-self: center;
+                padding: 1rem 0;
+                font-size: 1rem;
+                font-weight: 600;
+                color: #000;
+                background-color: #74b3e7;
+                border-radius: 8px;
+                border: none;
+                cursor: pointer;
+            }
+        
+        }
      }
    
    
    
      // Desktop
      @media (min-width: 1000px) and (max-width:1399px){
-   
+        body .Pconsulta {
+            background-color: #EBF2FA;
+            width: 100%;
+            display: flex;
+            padding-top: 30px;
+            justify-content: center;
+        
+            h1 {
+                font-size: xx-large;
+            }
+        
+            .Container {
+                width: 75%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 2rem;
+        
+            .formContainer {
+                display: flex;
+                gap: 1rem;
+                width: 900px;
+                section {
+                    flex: 1;
+                    background-color: #fff;
+                    padding: 1rem;
+                    border-radius: 8px;
+                    display: flex;
+                    flex-direction: column;
+        
+                    .row {
+                        display: flex;
+                        width: 100%;
+                        gap: 1rem;
+        
+                        div {
+                            display: flex;
+                            flex-direction: column;
+                            flex: 1;
+                        }
+                    }
+        
+                    .column {
+                        display: flex;
+                        flex-direction: column;
+                        width: calc(50% - 0.5rem)
+                    }
+        
+                    h3{
+                        color: #064789;
+                    }
+        
+        
+                    label+input,
+                    label+textarea {
+                        margin-bottom: 10px;
+                    }
+        
+                    textarea {
+                        resize: none;
+                    }
+                }
+            }
+        
+            button {
+                width: 50%;
+                align-self: center;
+                padding: 1rem 0;
+                font-size: 1rem;
+                font-weight: 600;
+                color: #fff;
+                background-color: #034e8b;
+                border-radius: 8px;
+                border: none;
+                cursor: pointer;
+        
+                &:active{
+                    transform: scale(0.98);
+                }
+            }
+            button:hover {
+                width: 50%;
+                align-self: center;
+                padding: 1rem 0;
+                font-size: 1rem;
+                font-weight: 600;
+                color: #000;
+                background-color: #74b3e7;
+                border-radius: 8px;
+                border: none;
+                cursor: pointer;
+            }
+        
+        }
+        
      }
