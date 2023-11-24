@@ -3,7 +3,7 @@ import './Pconsulta.scss'
 export default function Pconsulta() {
   return (
     <main className='Pconsulta'>
-      <div ClassName='Container'>
+      <div className='Container'>
         <h1>Formulário anamnese</h1>
         <form>
           <div className='formContainer'>
